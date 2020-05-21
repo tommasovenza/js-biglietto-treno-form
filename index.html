@@ -15,7 +15,7 @@
 
 
         <!-- sezione calcolo prezzo biglietto -->
-        <section class="prezzo">
+        <section id="prezzo" class="prezzo">
 
             <h2>calcola il prezzo del tuo biglietto</h2>
 
@@ -24,18 +24,18 @@
                     <div class="item">
                         <p>Nome Cognome</p>
                         <label for="name"></label>
-                        <input type="text" placeholder="Inserisci il tuo nome">
+                        <input id="form-nome" type="text" placeholder="Inserisci il tuo nome">
                     </div>
     
                     <div class="item">
                         <p>Km da percorrere</p>
                         <label for="name"></label>
-                        <input type="number" placeholder="Inserisci i km">
+                        <input id="form-km" type="number" placeholder="Inserisci i km">
                     </div>
     
                     <div class="item">
                       <p>Fascia d'età</p>
-                      <select>
+                      <select id="form-eta">
                         <option value="Minorenne">Minorenne</option>
                         <option value="Maggiorenne">Maggiorenne</option>
                         <option value="Anziano">Anziano</option>
@@ -56,12 +56,16 @@
         </section>
 
         <!-- sezione biglietto nascosta -->
-        <section class="biglietto">
+        <section id="biglietto" class="biglietto">
 
             <h2>il tuo biglietto</h2>
 
             <div class="biglietto-container">
-
+                <p>Nome passeggero: <span id="bigl-nome"></span></p>
+                <p>Offerta: <span id="bigl-offerta"></span></p>
+                <p>Carrozza: <span id="bigl-carrozza"></span></p>
+                <p>Codice CP: <span id="bigl-codiceCP"></span></p>
+                <p>Costo: <span id="bigl-costo"></span></p>
             </div>
 
         </section>
