@@ -13,6 +13,10 @@ h2  {
     font-size: 32px;
 }
 
+p {
+    padding: 5px 0;
+}
+
 main {
     background-color: #b10841;
     height: 700px;
@@ -27,7 +31,7 @@ main .biglietto-container {
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
-    height: 100px;
+    height: 200px;
 }
 
 .item-wrapper {
@@ -39,6 +43,7 @@ main .biglietto-container {
     float: left;
     color: #b10841;
     margin: 0 20px;
+    text-align: center;
 }
 
 .clearfix::after {
