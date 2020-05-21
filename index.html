@@ -10,10 +10,7 @@
 </head>
 <body>
     
-
     <main>
-
-
         <!-- sezione calcolo prezzo biglietto -->
         <section id="prezzo" class="prezzo">
 
@@ -21,6 +18,7 @@
 
             <div class="prezzo-container">
                 <div class="item-wrapper clearfix">
+                    <!-- i 3 form -->
                     <div class="item">
                         <p>Nome Cognome</p>
                         <label for="name"></label>
@@ -48,9 +46,6 @@
                         <button id="form-annulla">Annulla</button>
                     </div>
                 </div>
-                
-                
-                
             </div>
 
         </section>
@@ -61,25 +56,30 @@
             <h2>il tuo biglietto</h2>
 
             <div class="biglietto-container">
-                <p>Nome passeggero: <span id="bigl-nome"></span></p>
-                <p>Offerta: <span id="bigl-offerta"></span></p>
-                <p>Carrozza: <span id="bigl-carrozza"></span></p>
-                <p>Codice CP: <span id="bigl-codiceCP"></span></p>
-                <p>Costo: <span id="bigl-costo"></span></p>
+
+                <h3>dettaglio passeggeri</h3>
+                <div class="wrapper-dettagli clearfix">
+                    <div class="dettaglio">
+                        <p>Nome passeggero: <span id="bigl-nome"></span></p> 
+                    </div>
+                    <div class="dettaglio">
+                        <p>Offerta: <span id="bigl-offerta"></span></p>
+                    </div>
+                    <div class="dettaglio">
+                        <p>Carrozza: <span id="bigl-carrozza"></span></p>
+                    </div>
+                    <div class="dettaglio">
+                        <p>Codice CP: <span id="bigl-codiceCP"></span></p>
+                    </div>
+                    <div class="dettaglio">
+                        <p>Costo: <span id="bigl-costo"></span></p>
+                    </div>
+                </div>
             </div>
 
         </section>
 
-
-
     </main>
-
-    
-
-
-
-
-
 
 <script src="js/script.js"></script>
 </body>
