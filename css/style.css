@@ -37,6 +37,7 @@ main .biglietto-container {
 .item-wrapper {
     margin: 0 auto;
     width: 90%;
+    position: relative;
 }
 
 .prezzo-container .item-wrapper .item {
@@ -50,4 +51,11 @@ main .biglietto-container {
     content: '';
     display: table;
     clear: both;
+}
+
+.button-container {
+    width: 100%;
+    position: absolute;
+    bottom: -50px;
+    left: 230px;
 }
