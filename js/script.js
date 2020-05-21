@@ -23,21 +23,23 @@ var formKm = document.getElementById('form-km').value;
 var formEta = document.getElementById('form-eta').value;
 
 // calcolo prezzo
-
 var prezzo = (formKm * 0.21);
+var offerta = 'Prezzo standard'
 
 // sconti
 
 if ( formEta == 'Minorenne' ) {
     prezzo = (prezzo - (prezzo * 20) / 100);
+    offerta = 'prezzo sconto minorenne'
 } else if ( formEta == 'Anziano') {
     prezzo = (prezzo - (prezzo * 40) / 100);
+    offerta = 'prezzo sconto anziani'
 }
 
 // Compilazione elementi biglietto
 biglNome.innerHTML = formNome;
 biglCosto.innerHTML = prezzo.toFixed(2) + " euro";
- 
+biglOfferta.innerHTML = offerta;
     }
 );
 
@@ -55,6 +57,12 @@ var formEta = document.getElementById('form-eta').value = 'Minorenne';
 
 //gestione annullamento nome
 biglNome.innerHTML = '';
+
+//gestione annullamento offerta
+
+biglOfferta.innerHTML = '';
+
+biglCosto.innerHTML = '';
 
     }  
 );
