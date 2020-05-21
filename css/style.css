@@ -129,3 +129,11 @@ main .biglietto-container {
 .wrapper-dettagli .dettaglio span {
     display: block;
 }
+
+.biglietto-nascosto {
+    display: none;
+}
+
+.visible {
+    display: block;
+}

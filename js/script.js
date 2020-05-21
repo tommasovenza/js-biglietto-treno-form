@@ -1,4 +1,9 @@
 // le variabili
+
+// variabile che nascondo il biglietto
+
+var biglietto_nascosto = document.getElementById('biglietto');
+
 var buttonGenera = document.getElementById('form-genera');
 var buttonAnnulla = document.getElementById('form-annulla');
 
@@ -40,6 +45,11 @@ if ( formEta == 'Minorenne' ) {
 biglNome.innerHTML = formNome;
 biglCosto.innerHTML = prezzo.toFixed(2) + " euro";
 biglOfferta.innerHTML = offerta;
+
+
+// mostro biglietto
+biglietto_nascosto.className = 'visible';
+
     }
 );
 
@@ -62,7 +72,7 @@ biglNome.innerHTML = '';
 
 biglOfferta.innerHTML = '';
 
-biglCosto.innerHTML = '';
+biglCosto.innerHTML = ''; 
 
     }  
 );
