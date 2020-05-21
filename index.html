@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Esercizio Biglietto Treno con Form</title>
 </head>
@@ -17,7 +19,29 @@
             <h2>calcola il prezzo del tuo biglietto</h2>
 
             <div class="prezzo-container">
-
+                <div class="item-wrapper clearfix">
+                    <div class="item">
+                        <p>Nome Cognome</p>
+                        <label for="name">Inserisci il tuo nome</label>
+                        <input type="text">
+                    </div>
+    
+                    <div class="item">
+                        <p>Km da percorrere</p>
+                        <label for="name">Inserisci i km</label>
+                        <input type="text">
+                    </div>
+    
+                    <div class="item">
+                      <p>Fascia d'età</p>
+                      <select id="cars" size="3">
+                        <option value="Minorenne">Minorenne</option>
+                        <option value="Maggiorenne">Maggiorenne</option>
+                        <option value="Anziano">Anziano</option>
+                      </select>
+                    </div>
+                </div>
+                
             </div>
 
         </section>
@@ -29,7 +53,7 @@
             <div class="biglietto-container">
 
             </div>
-            
+
         </section>
 
 

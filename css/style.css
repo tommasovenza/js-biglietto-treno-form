@@ -10,7 +10,7 @@ h2  {
     text-align: center;
     text-transform: uppercase;
     color: #fff;
-    font-size: 30px;
+    font-size: 32px;
 }
 
 main {
@@ -28,4 +28,21 @@ main .biglietto-container {
     border-radius: 10px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
     height: 100px;
+}
+
+.item-wrapper {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.prezzo-container .item-wrapper .item {
+    float: left;
+    color: #b10841;
+    margin: 0 20px;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
 }
