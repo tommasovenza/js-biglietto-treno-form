@@ -74,6 +74,10 @@ biglOfferta.innerHTML = '';
 
 biglCosto.innerHTML = ''; 
 
+//nascondi biglietto
+
+biglietto_nascosto.className = 'biglietto-nascosto';
+
     }  
 );
 
