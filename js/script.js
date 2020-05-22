@@ -82,3 +82,6 @@ biglietto_nascosto.className = 'biglietto-nascosto';
 );
 
 
+
+
+

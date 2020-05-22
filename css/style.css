@@ -1,9 +1,13 @@
+/*  reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*  fine reset */
+
+/*  stili generali */
 body {font-family: 'Roboto', sans-serif;}
 
 h2  {
@@ -17,10 +21,7 @@ h3 {
     text-transform: uppercase;
     font-size: 24px;
     text-align: center;
-}
-
-p {
-    padding: 5px 0;
+    margin-bottom: 15px;
 }
 
 main {
@@ -39,6 +40,8 @@ main .biglietto-container {
     box-shadow: 0 1px 4px rgba(0, 0, 0, .5);
     height: 200px;
 }
+
+/*  fine stili generali */
 
 /* clearfix */
 
@@ -60,6 +63,11 @@ main .biglietto-container {
     width: 30%;
 }
 
+.prezzo-container .item-wrapper .item label {
+    display: block;
+    padding: 5px 0;
+}
+
 .item-wrapper {
     margin: 0 auto;
     width: 90%;   
@@ -78,6 +86,15 @@ main .biglietto-container {
     border-radius: 4px;
 }
 
+.prezzo-container .item-wrapper .item input:focus,
+.prezzo-container .item-wrapper .item select:focus {
+    background-color: #b10841;
+    color: #fff;
+}
+
+.prezzo-container .item-wrapper .item input:focus::placeholder {
+    color: #fff;
+}
 
 /* contenitore pulsanti */
 .button-container {
@@ -97,16 +114,16 @@ main .biglietto-container {
     border-radius: 5px;
     padding: 5px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .button-container button:hover {
     color: #fff;
-    background-color: #b10841;
-    border-color: #b10841;
+    background-color: #737373;
+    border-color: #737373;
 }
 
 .wrapper-dettagli {
-    padding: 10px;
     border: 1px solid #737373;
     border-left: none;
     border-right: none;
@@ -124,6 +141,10 @@ main .biglietto-container {
 
 .wrapper-dettagli .dettaglio:first-child {
     background-color: #737373;
+}
+
+.wrapper-dettagli .dettaglio:first-child p {
+    font-weight: 700;
 }
 
 .wrapper-dettagli .dettaglio span {
