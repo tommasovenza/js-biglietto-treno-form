@@ -151,10 +151,10 @@ main .biglietto-container {
     display: block;
 }
 
-.biglietto-nascosto {
+ .biglietto-nascosto {
     display: none;
 }
 
 .visible {
     display: block;
-}
+} 

@@ -1,86 +1,92 @@
-// le variabili
+// definisco le variabili
 
-// variabile che nascondo il biglietto
+var mostraBiglietto = document.getElementById('biglietto');
 
-var biglietto_nascosto = document.getElementById('biglietto');
+// variabili dei due pulsanti principali 
+var genera = document.getElementById('btn-genera');
+var annulla = document.getElementById('btn-annulla');
 
-var buttonGenera = document.getElementById('form-genera');
-var buttonAnnulla = document.getElementById('form-annulla');
+// le variabili attribuite ai form utente
+var inputNome = document.getElementById('form-nome');
+var inputKm = document.getElementById('form-km');
+var inputEta = document.getElementById('form-eta');
 
-// variabili del form
-var formKm = document.getElementById('form-km');
-var formEta = document.getElementById('form-eta');
-var formNome = document.getElementById('form-nome');
+// Variabili gestione stampa biglietto
 
+var nomeBiglietto = document.getElementById('bigl-nome');
+var offertaBiglietto = document.getElementById('bigl-offerta');
+var prezzo = document.getElementById('bigl-costo');
+var numeroCarrozza = document.getElementById('bigl-carrozza');
+var numeroCodiceCP = document.getElementById('bigl-codiceCP');
 
-//Elementi biglietto 
-var biglNome = document.getElementById('bigl-nome');
-var biglOfferta = document.getElementById('bigl-offerta');
-var biglCosto = document.getElementById('bigl-costo');
+// evento click pulsante genera
+genera.addEventListener('click', 
+function() {
 
-// Evento quando si clicca su genera
-buttonGenera.addEventListener('click', 
-    function() { 
+// variabili costo biglietto
 
-// Gestione elaborazione biglietto (cosa succede quando clicco su genera dopo aver inserito i dati)
-var formNome = document.getElementById('form-nome').value;
-var formKm = document.getElementById('form-km').value;
-var formEta = document.getElementById('form-eta').value;
+var km = parseInt(inputKm.value);
 
-// calcolo prezzo
-var prezzo = (formKm * 0.21);
-var offerta = 'Prezzo standard'
+var costoBiglietto = km * 0.21;
 
-// sconti
+var offerta = 'prezzo standard';
 
-if ( formEta == 'Minorenne' ) {
-    prezzo = (prezzo - (prezzo * 20) / 100);
-    offerta = 'prezzo sconto minorenne'
-} else if ( formEta == 'Anziano') {
-    prezzo = (prezzo - (prezzo * 40) / 100);
-    offerta = 'prezzo sconto anziani'
-}
-
-// Compilazione elementi biglietto
-biglNome.innerHTML = formNome;
-biglCosto.innerHTML = prezzo.toFixed(2) + " euro";
-biglOfferta.innerHTML = offerta;
-
-
-// mostro biglietto
-biglietto_nascosto.className = 'visible';
-
+if  (inputEta.value == 'minorenne') {
+    costoBiglietto = costoBiglietto - (costoBiglietto * 20 / 100); 
+    offerta = 'prezzo speciale sconto minorenni';
     }
+    
+    else if ( inputEta.value == 'anziano') {
+        costoBiglietto = costoBiglietto - (costoBiglietto * 40 / 100);
+    offerta = 'prezzo speciale sconto anziani';
+    }
+    
+// calcolo numero carrozza e codice CP    
+numeroCarrozzaValue = Math.floor(Math.random() * 10) + 1;
+numeroCodiceCPValue = Math.floor(Math.random() * 100000);
+
+// cosa succede quando si clicca genera
+
+// stampo valori nel biglietto
+// questa è la parte più difficile da associare 
+
+nomeBiglietto.innerHTML = inputNome.value;
+offertaBiglietto.innerHTML = offerta;
+prezzo.innerHTML = costoBiglietto.toFixed(2) + ' Euro';
+numeroCarrozza.innerHTML = numeroCarrozzaValue;
+numeroCodiceCP.innerHTML = numeroCodiceCPValue;
+
+
+// infine mostro biglietto
+
+mostraBiglietto.className = 'visible';
+
+}
 );
 
-//Funzione Annulla (ovvero cosa succede quando clicco sul tasto annulla)
-buttonAnnulla.addEventListener('click', 
-    function() {
+// evento click pulsante annulla // reset
+annulla.addEventListener('click', 
+function() {
 
-// annulla tutte le variabili sottostanti attribuendo ad ognuna valore vuoto
+// cosa succede quando si clicca pulsante annulla
 
-var formNome = document.getElementById('form-nome').value = '';
-var formKm = document.getElementById('form-km').value = '';
+// reset campi stampati sul biglietto
+nomeBiglietto.innerHTML = '';
+offertaBiglietto.innerHTML = '';
+prezzo.innerHTML = '';
+numeroCarrozza.innerHTML = '';
+numeroCodiceCP.innerHTML = '';
 
-// questa ha come valore il primo valore che si trova nella select
-var formEta = document.getElementById('form-eta').value = 'Minorenne';
+// reset campi compilati dei form
+inputNome.value = '';
+inputKm.value = '';
+inputEta.value = 'minorenne';
 
-//gestione annullamento nome
-biglNome.innerHTML = '';
+// nascondi biglietto
+mostraBiglietto.className = 'biglietto-nascosto';
 
-//gestione annullamento offerta
-
-biglOfferta.innerHTML = '';
-
-biglCosto.innerHTML = ''; 
-
-//nascondi biglietto
-
-biglietto_nascosto.className = 'biglietto-nascosto';
-
-    }  
-);
-
+} 
+); + ' euro'
 
 
 
