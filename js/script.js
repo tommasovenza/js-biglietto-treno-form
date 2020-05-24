@@ -1,5 +1,4 @@
 // definisco le variabili
-
 var mostraBiglietto = document.getElementById('biglietto');
 
 // variabili dei due pulsanti principali 
@@ -10,7 +9,6 @@ var annulla = document.getElementById('btn-annulla');
 var inputNome = document.getElementById('form-nome');
 var inputKm = document.getElementById('form-km');
 var inputEta = document.getElementById('form-eta');
-
 
 // variabile errore compilazione campi
 var errore = document.getElementById('errore');
@@ -39,9 +37,7 @@ genera.addEventListener('click',
             // nascondi biglietto
             mostraBiglietto.className = 'biglietto-nascosto';     
 
-
         } else {
-
 
             // nascondo eventualmente il messaggio di errore
             errore.className = 'biglietto-nascosto';
@@ -72,7 +68,6 @@ genera.addEventListener('click',
             prezzo.innerHTML = costoBiglietto.toFixed(2) + ' Euro';
             numeroCarrozza.innerHTML = numeroCarrozzaValue;
             numeroCodiceCP.innerHTML = numeroCodiceCPValue;
-
 
             // infine mostro biglietto
 
